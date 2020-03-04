@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stackers</title>
+	<link rel="icon" href="img/favicon.png" type="image/gif" sizes="16x16">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-0 fixed-top ">
+	<a href="index.html" class="navbar-brand"><img class="img-fluid" src="img/logo1.jpg" height="50" width="200"></a>
+	<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#mr"><span class="navbar-toggler-icon"></span></button>
+	<div class="collapse navbar-collapse" id="mr">
+		<ul class="navbar-nav ml-auto">
+		<li class="nav-item ">
+		<a href="index.html" class="nav-link">Home</a>	
+		</li>
+		<li class="nav-item dropdown">
+		<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="drop">Programs</a>
+		<div class="dropdown-menu  ">
+			<a href="c.html" class="dropdown-item ">C-Programs</a>    <!--text-muted-->
+			<a href="#" class="dropdown-item">C++ Programs</a>
+			<a href="#" class="dropdown-item">Data-Structure</a>
+			<div class="dropdown-divider"></div>
+			<a href="#" class="dropdown-item">More Programs...</a>
+		</div>	
+		</li>
+		<li class="nav-item">
+		<a href="#" class="nav-link">Wall-of-Fame</a>	
+		</li>
+		<li class="nav-item">
+		<a href="#" class="nav-link">About</a>	
+		</li>
+		<li class="nav-item">
+		<a href="#" class="nav-link">Contact</a>	
+		</li>
+	</ul>
+	</div>
+</nav>
+	<div class="container-fluid pt-5 pb-4 " style="background-color: #ffa07a;" >
+		<div class="text-center mt-5">
+			<h1>C Programs</h1>
+		</div>
+	</div>
+	<div class="container mt-5">
+    	<div class="row">
+    		<div class="col-sm-4">
+   <div class="nav flex-column  nav-pills  " id="vv" role="tablist" aria-orientation="vertical">
+   	<h3>Basic Program</h3>
+	<a href="#q1" class="nav-link active" role="tab" data-toggle="pill" id="v-1">Hello World</a>
+    <a href="#q2" class="nav-link " role="tab" data-toggle="pill" id="v-2">Taking Input from User</a>
+    <a href="#q3" class="nav-link " role="tab" data-toggle="pill" id="v-3">Find ASCII Value of Character</a>
+    <a href="#q4" class="nav-link " role="tab" data-toggle="pill" id="v-4">Using gets( ) function</a>
+    <a href="#q5" class="nav-link " role="tab" data-toggle="pill" id="v-4">If-Else</a>
+    <a href="#q6" class="nav-link " role="tab" data-toggle="pill" id="v-4">Switch Case</a>
+    <a href="#q7" class="nav-link " role="tab" data-toggle="pill" id="v-4">Checking for Vowel</a>
+    <a href="#q8" class="nav-link " role="tab" data-toggle="pill" id="v-4">Reversing Case of Character</a>
+    <a href="#q9" class="nav-link " role="tab" data-toggle="pill" id="v-4">Swapping Two Numbers</a>
+    <a href="#q10" class="nav-link " role="tab" data-toggle="pill" id="v-4">Largest and Smallest using Global Declaration</a>
+    			</div>
+    		</div>
+    		<div class="col-sm-8">
+    			<div class="tab-content" id="vc">
+    				
+    				<div class="tab-pane face show active" id="q1" role="tab-panel">
+    					<h1 class="mb-3">Hello World Program</h1>
+    					<p class="lead mb-3">A simple C program to display "Hello, World!" on the screen. Since, it's a very simple program, it is often used to illustrate the syntax of a programming language.</p>
+<pre class="bg-dark p-4 text-white">#include &lt;stdio.h&gt;
+
+int main()
+{<span class="text-danger">
+// printf() ke aandhar jo bhi  quotation " " me likha hoga bo display ho jayaega
+// printf() displays the string inside quotation</span>
+printf("Welcome to Stackers\n");
+printf("Hello, World!");
+   return 0;
+}
+</pre>
+<button type="button" class="btn btn-secondary btn-sm mb-3" data-toggle="collapse" data-target=".m"> Output</button>
+<div class="collapse m" >
+	<div class="card-body">
+		<p class="border p-2 text-success bg-dark"> Welcome to Stackers<br>Hello, World!</p>
+	</div>
+</div>
+    				</div>
+    				
+    				<div class="tab-pane face show " id="q2" role="tab-panel">
+    					<h1 class="mb-3">C Program to Print an Integer (Entered by the User)</h1>
+    					<p class="lead mb-3">In this program, integer entered by the user is stored in a variable. Then, that variable is displayed on the screen using printf() function.</p>
+    					<pre class="bg-dark p-4 text-white">
+#include &lt;stdio.h&gt;
+int main()
+{
+    int number;
+    printf("Welcome to Stackers\n");
+    printf("Enter an integer: ");  
+    <span class="text-danger">
+    // scanf() read karta ha jo bhi user likta ha or phir use variable( Ex-number)
+     me dal deta ha uske format(Ex-%d) ki hisab se
+    // scanf() reads the formatted input and stores them</span>
+    scanf("%d", &number);  
+    <span class="text-danger">
+    // printf() displays the formatted output</span>
+    printf("You entered: %d", number);
+    return 0;
+}</pre>
+<button type="button" class="btn btn-secondary btn-sm mb-3" data-toggle="collapse" data-target=".m"> Output</button>
+<div class="collapse m" >
+	<div class="card-body">
+		<p class="  border p-2 text-success bg-dark"> Welcome to Stackers<br>Enter a integer: 25<br>
+You entered: 25</p>
+	</div>
+</div>
+    				</div>
+    				<div class="tab-pane face show " id="q3" role="tab-panel">
+    					<h1 class="mb-3">ASCII value of Character</h1>
+    					<p class="lead mb-3">
+    						Below is a program to find ASCII value of any input character.
+                             <br><span class="text-success">%c</span> is the format specifier to take character as input
+    					</p>
+    					<pre class="bg-dark p-4 text-white">
+#include &lt;stdio.h&gt;
+int main()
+{
+    char c;
+    printf("Welcome to Stackers\n");
+    printf("Enter a character: ");
+<span class="text-danger">
+    //scanf() character(Ex-a-z) input read karne ke liye</span>
+    scanf("%c", &c);<span class="text-danger">  
+    // %d character ki integer value display karne ke liye
+    // %c character ko hi display karne ki liye </span>
+    printf("ASCII value of %c = %d", c, c);
+    return 0;
+}</pre>
+<button type="button" class="btn btn-secondary btn-sm mb-3" data-toggle="collapse" data-target=".m"> Output</button>
+<div class="collapse m" >
+	<div class="card-body">
+		<p class="  border p-2 text-success bg-dark"> Welcome to Stackers<br>Enter a character: G<br>
+ASCII value of G = 71</p>
+	</div>
+</div>
+    				</div>
+    				<div class="tab-pane face show " id="q4" role="tab-panel">
+    					<h1 class="mb-3">How to use gets() function</h1>
+    					<p class="lead mb-3">Below is a program on use of <span class="text-danger">gets()</span>.<br>
+<span class="text-danger">gets()</span> takes only a single line at a time i.e all the words before hitting \n(enter key).</p>
+<pre class="bg-dark p-4 text-white">
+#include&lt;stdio.h&gt;
+int main()
+{
+        printf("Welcome to Stackers\n");
+    char str[50];   <span class="text-danger">// char array of size 50</span>
+    printf("Enter your complete name:\n");<span class="text-danger">
+    //gets() input me puri string le ta ha</span>
+    gets(str);
+    printf("\n Complete name is: %s\n", str);
+    return 0;
+}</pre>
+<button type="button" class="btn btn-secondary btn-sm mb-3" data-toggle="collapse" data-target=".m"> Output</button>
+<div class="collapse m" >
+	<div class="card-body">
+		<p class="  border p-2 text-success bg-dark"> Welcome to Stackers<br>Enter your complete name:<br>
+Naman_Badkul <br>Complete name is: Naman_Badkul</p>
+	</div>
+</div>
+    				</div>
+    				<div class="tab-pane face show " id="q5" role="tab-panel">
+    					<h1 class="mb-3">Basic ifelse condition program</h1>
+    					<pre class="bg-dark p-4 text-white">
+#include&lt;stdio.h&gt;
+
+int main()
+{
+    int number;
+    printf("Welcome to Stackers\n");
+    printf("Please enter a number:\n");
+    scanf("%d",&number);<span class="text-danger">
+    /*
+        For single statements we can skip the curly brackets
+    */</span>
+    if(number < 100)
+        printf("Number is less than 100!\n");
+    else if(number == 100)
+        printf("Number is 100!\n");
+    else
+        printf("Number is greater than 100!\n");
+    return 0;
+}</pre>
+<button type="button" class="btn btn-secondary btn-sm mb-3" data-toggle="collapse" data-target=".m"> Output</button>
+<div class="collapse m" >
+	<div class="card-body">
+		<p class="  border p-2 text-success bg-dark"> Welcome to Stackers<br>Please enter a number:<br>
+7 <br>Number is less than 100! </p>
+	</div>
+</div>
+    				</div>
+    				<div class="tab-pane face show " id="q6" role="tab-panel">
+    					<h1 class="mb-3">Swich Case with break</h1>
+    					<p class="lead mb-3"> 
+    					Below is a program on switch case with break.
+
+                     <br> <span class="text-danger">switch( )</span> can only contain char and int.
+
+ <br><span class="text-danger">break</span> is used to exit from switch statement.
+
+<br><b>switch</b> case can be without default case.<br>
+
+<br>Another piece of information here is that a char variable is always initialized within ''(single quotes).</p>
+<pre class="bg-dark p-4 text-white">
+#include&lt;stdio.h&gt;
+int main()
+{
+	char grade;
+    printf("Welcome to Stackers\n");
+    printf("Enter your grade:\n");
+    scanf("%c", &grade);
+
+    switch(grade)
+    {
+        case 'A':
+            printf("Excellent\n");
+            break;
+        case 'B':
+            printf("Keep it up!\n\n");
+            break;
+        case 'C':
+            printf("Well done\nbreak keyword takes execution to exit the switch case\n");
+            break;
+        case 'D':
+            printf("You passed\n");
+            break;
+        case 'F':
+            printf("Better luck next time\n");
+            break;
+        default:
+            printf("Invalid grade\n");
+    }
+    printf("Your grade is %c\n",grade);
+    return 0;
+}</pre>
+<button type="button" class="btn btn-secondary btn-sm mb-3" data-toggle="collapse" data-target=".m"> Output</button>
+<div class="collapse m" >
+	<div class="card-body">
+		<p class="  border p-2 text-success bg-dark"> Welcome to Stackers<br>Enter your grade:<br>
+C <br>Well done<br>break keyword takes execution to exit the switch case<br>Your grade is C </p>
+	</div>
+</div>
+    				</div>
+    				<div class="tab-pane face show " id="q7" role="tab-panel">
+    					<h1 class="mb-3">Program to check if input character is a vowel using Switch Case</h1>
+    					<p class="lead mb-3"> Below is a program to check vowel using switch case.</p>
+    					<pre class="bg-dark p-4 text-white">
+#include&lt;stdio.h&gt;
+int main()
+{
+	char ch;
+    printf("Welcome to Stackers\n");
+    printf("Input a Character :  ");
+    scanf("%c", &ch);
+
+    switch(ch)
+    {
+        case 'a':
+        case 'A':
+        case 'e':
+        case 'E':
+        case 'i':
+        case 'I':
+        case 'o':
+        case 'O':
+        case 'u':
+        case 'U':
+            printf("\n%c is a vowel.\n", ch);
+            break;
+        default:
+            printf("%c is not a vowel.\n", ch);
+    }
+    return 0;
+}</pre>
+<button type="button" class="btn btn-secondary btn-sm mb-3" data-toggle="collapse" data-target=".m"> Output</button>
+<div class="collapse m" >
+	<div class="card-body">
+		<p class="  border p-2 text-success bg-dark"> Welcome to Stackers<br>Input a Character : a<br>
+ a is a vowel.</p>
+	</div>
+</div>
+    				</div>
+    				<div class="tab-pane face show " id="q8" role="tab-panel">
+    					<h1 class="mb-3">Program to reverse the case of input character</h1>
+    					<p class="lead mb-3"> 
+    						Below is a program to reverse the case of input character.<br>
+
+<span class="text-danger">getchar( )</span>  is similar to <span class="text-danger">scanf( )</span>.<br>
+
+<span class="text-danger">islower( )</span> is system defined function under ctype.h header file to check if the character is in lowercase or not.<br>
+
+<span class="text-danger">toupper( )</span> converts the input parameter into equivalent uppercase char.<br>
+
+<span class="text-danger">putchar( )</span> is similar to printf( ).</p><br>
+<pre class="bg-dark p-4 text-white">
+#include&lt;stdio.h&gt;
+#include&lt;ctype.h&gt;<span class="text-danger">// to use system defined function islower & toupper</span> 
+
+int main()
+{
+	char alphabet;
+     printf("Welcome to Stackers\n");
+    printf("Enter an alphabet : ");
+    putchar('\n');  <span class="text-danger">// to move to next Line</span> 
+
+    alphabet=getchar();
+
+    printf("\n\nReverse case of %c is :  ",alphabet);
+
+    if(islower(alphabet))
+        putchar(toupper(alphabet));
+
+    else 
+       <span class="text-danger">// must be an uppercase character</span> 
+        printf("%c",tolower(alphabet)) ;	
+    return 0;
+}
+</pre>
+<button type="button" class="btn btn-secondary btn-sm mb-3" data-toggle="collapse" data-target=".m"> Output</button>
+<div class="collapse m" >
+	<div class="card-body">
+		<p class="  border p-2 text-success bg-dark"> Welcome to Stackers<br>Enter an alphabet : s<br>
+ Reverse case of s is : S</p>
+	</div>
+</div>
+    				</div>
+    				<div class="tab-pane face show " id="q9" role="tab-panel">
+    					<h1 class="mb-3">Program to swap two numbers</h1>
+    					<p class="lead mb-3">Below is a program to swap two numbers using temporary variable.
+    					</p> 
+    					    						<pre class="bg-dark p-4 text-white">
+#include&lt;stdio.h&gt;
+void main()
+{
+    int x = 10, y = 15, temp;
+    temp = x;
+    printf("Welcome to Stackers\n");
+    x = y;
+    y = temp;
+    printf("x = %d and y = %d", x, y);
+    getch();
+}</pre>
+<button type="button" class="btn btn-secondary btn-sm mb-3" data-toggle="collapse" data-target=".m"> Output</button>
+<div class="collapse m" >
+	<div class="card-body">
+		<p class="  border p-2 text-success bg-dark"> Welcome to Stackers<br>x = 15 and y = 10</p>
+	</div>
+</div>
+    				</div>
+    				<div class="tab-pane face show " id="q10" role="tab-panel">
+    					<h1 class="mb-3"> Largest and Smallest using Global Declaration</h1>
+    					<p class="lead mb-3"> 
+    						Some important points about Global variable declaration are:<br>
+
+It can be done anywhere within the program.<br>
+Unlike local variables that can be used within the scope of a particular function.<br>
+<span class="text-danger"> &</span>  is used to assign the input value to the variable and store it at that particular location.<br>
+<span class="text-danger">%0nd</span> is used to represent numbers in n digit format with leading 0's.
+
+Below is a program to find largest and smallest value using global declaration.</p>
+<pre class="bg-dark p-4 text-white">
+#include&lt;stdio.h&gt;
+int a,b;
+int main()
+{
+   printf("Welcome to Stackers\n");
+    printf("\nEnter the two values to find the greatest and smallest number: \n");
+    scanf("%d%d", &a, &b);
+
+    if(a == b)
+        printf("Both are equal\n");
+        
+    else if(a < b)
+    {
+        printf("\nThe largest number is %03d\n", b);
+        printf("\nThe smallest number is %03d\n", a);
+        printf("\nThe largest number is %03d\n", b);
+    }
+    else    <span class="text-danger">//Only possibility remaining</span>
+    {
+        printf("The largest number is %03d\n", a);
+        printf("The smallest number is %03d\n", b);
+    }
+    return 0;
+}
+</pre>
+<button type="button" class="btn btn-secondary btn-sm mb-3" data-toggle="collapse" data-target=".m"> Output</button>
+<div class="collapse m" >
+	<div class="card-body">
+		<p class="  border p-2 text-success bg-dark"> Welcome to Stackers<br>Enter the two values to find the greatest and smallest number:<br>10<br>7<br>The largest number is 101<br>The smallest number is 007</p>
+	</div>
+</div>
+    				
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+</html>

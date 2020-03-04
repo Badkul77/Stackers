@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Stackers-C</title>
+	<link rel="icon" href="img/favicon.png" type="image/gif" sizes="16x16">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark mb-0 fixed-top">
+	<a href="index.html" class="navbar-brand"><img class="img-fluid" src="img/logo1.jpg" height="50" width="200"></a>
+	<button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#mr"><span class="navbar-toggler-icon"></span></button>
+	<div class="collapse navbar-collapse" id="mr">
+		<ul class="navbar-nav ml-auto">
+		<li class="nav-item ">
+		<a href="index.html" class="nav-link">Home</a>	
+		</li>
+		<li class="nav-item dropdown">
+		<a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" id="drop">Programs</a>
+		<div class="dropdown-menu  ">
+			<a href="#" class="dropdown-item ">C-Programs</a>    <!--text-muted-->
+			<a href="#" class="dropdown-item">C++ Programs</a>
+			<a href="#" class="dropdown-item">Data-Structure</a>
+			<div class="dropdown-divider"></div>
+			<a href="#" class="dropdown-item">More Programs...</a>
+		</div>	
+		</li>
+		<li class="nav-item">
+		<a href="#" class="nav-link">Wall-of-Fame</a>	
+		</li>
+		<li class="nav-item">
+		<a href="#" class="nav-link">About</a>	
+		</li>
+		<li class="nav-item">
+		<a href="#" class="nav-link">Contact</a>	
+		</li>
+	</ul>
+	</div>
+</nav>
+<div class="container-fluid pt-5 pb-4 " style="background-color: #ffa07a;" >
+		<div class="text-center mt-5">
+			<h1>C Programs</h1>
+		</div>
+	</div>
+	<div class="container">
+		<input class="form-control my-4" id="acc" type="text" placeholder="Search..">
+		<h3>Program Topic list</h3>
+		<div class="row" id="acc">
+			<div class="col-sm-4  col-6 mt-2 p-4">
+				<a class="btn btn-outline-dark btn-lg" href="basic.html" role="button">Basic Programs</a>
+			</div>
+			<div class="col-sm-4 mt-2 col-6 p-4">
+				<a class="btn btn-outline-dark btn-lg" href="loop.html" role="loop">loop</a>
+			</div>
+			<div class="col-sm-4 mt-2 col-6 p-4">
+				<a class="btn btn-outline-dark btn-lg" href="#" role="button">Number</a>
+			</div>
+			<div class="col-sm-4 mt-2 col-6 p-4">
+				<a class="btn btn-outline-dark btn-lg" href="#" role="button">Arrays</a>
+			</div>
+			<div class="col-sm-4 mt-2 col-6 p-4">
+				<a class="btn btn-outline-dark btn-lg" href="#" role="button">Pointer</a>
+			</div>
+			<div class="col-sm-4 mt-2 col-6 p-4">
+				<a class="btn btn-outline-dark btn-lg" href="#" role="button">ctype.h</a>
+			</div>
+			<div class="col-sm-4 mt-2 col-6 p-4">
+				<a class="btn btn-outline-dark btn-lg" href="#" role="button">String</a>
+			</div>
+			<div class="col-sm-4 mt-2 col-6 p-4">
+				<a class="btn btn-outline-dark btn-lg" href="#" role="button">Recursion</a>
+			</div>
+			<div class="col-sm-4 mt-2 col-6 p-4">
+				<a class="btn btn-outline-dark btn-lg" href="#" role="button">File and Streams</a>
+			</div>
+			<div class="col-sm-4 mt-2 col-6 p-4">
+				<a class="btn btn-outline-dark btn-lg" href="#" role="button">Important Concept</a>
+			</div>
+			<div class="col-sm-4 mt-2  col-6 p-4">
+				<a class="btn btn-outline-dark btn-lg" href="#" role="button">Miscellaneous</a>
+			</div>
+		</div>
+	</div>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#acc").on("keyup", function() {
+    var value = $(this).val().toLowerCase();
+    $("#acc a").filter(function() {
+      $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+    });
+  });
+});
+</script>
+</body>
+</html>
